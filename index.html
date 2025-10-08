@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baked by Abby - Delicious Homemade Goods</title>
+    <style>
+        /* Basic Styling for the Page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdf7f0; /* Light creamy background */
+            color: #5d4037; /* Brown text color */
+        }
+        /* Header and Navigation */
+        header {
+            background-color: #ffccbc; /* Light peach header */
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #e6a49a;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #bf5f5f;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #5d4037;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        /* Main Content Sections */
+        .container {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .section {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2em;
+            border-bottom: 2px solid #e6a49a;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        /* Product Gallery */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px; /* Space between images */
+        }
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .product img {
+            width: 250px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .product p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        /* About Section */
+        .about-us p {
+            text-align: left;
+            line-height: 1.6;
+        }
+        /* Footer */
+        footer {
+            background-color: #5d4037;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Baked by Abby</h1>
+        <nav>
+            <a href="#products">Our Products</a>
+            <a href="#about">About Us</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <div id="products" class="section">
+            <h2>Our Baked Goods</h2>
+            <div class="gallery">
+                <div class="product">
+                    <img src="images/placeholder1.jpg" alt="Chocolate Chip Cookies">
+                    <p>Chocolate Chip Cookies</p>
+                </div>
+
+                <div class="product">
+                    <img src="images/placeholder2.jpg" alt="Blueberry Muffins">
+                    <p>Blueberry Muffins</p>
+                </div>
+
+                <div class="product">
+                    <img src="images/placeholder3.jpg" alt="Cinnamon Rolls">
+                    <p>Cinnamon Rolls</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="about" class="section about-us">
+            <h2>About Us</h2>
+            <p>
+                Welcome to Baked by Abby! We are a small business passionate about creating delicious, homemade baked goods with love and the finest ingredients. From classic cookies to delightful muffins, every treat is crafted to bring a smile to your face.
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Baked by Abby. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
