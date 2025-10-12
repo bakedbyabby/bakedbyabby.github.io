@@ -4,330 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baked by Abby - Delicious Homemade Goods</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        /* CSS Reset & Basic Styling */
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
-
+        /* Basic Styling for the Page */
         body {
-            font-family: 'Roboto', sans-serif; /* Modern, clean body font */
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fcf8f5; /* Very light, almost white creamy background */
-            color: #4a3830; /* Darker, sophisticated brown text */
-            line-height: 1.6;
+            background-color: #fdf7f0; /* Light creamy background */
+            color: #5d4037; /* Brown text color */
         }
-
-        .container {
-            max-width: 1200px; /* Wider container for bigger images */
-            margin: 0 auto;
-            padding: 20px;
-        }
-
         /* Header and Navigation */
         header {
+            background-color: #ffccbc; /* Light peach header */
+            padding: 20px;
             text-align: center;
-            padding: 40px 20px;
-            position: relative;
-            z-index: 10;
+            border-bottom: 2px solid #e6a49a;
         }
-
         header h1 {
             margin: 0;
-            font-family: 'Playfair Display', serif; /* Elegant heading font */
-            font-size: 3.5em; /* Larger title */
-            color: #8c5e42; /* A richer, inviting brown */
-            letter-spacing: 2px;
-            font-weight: 700;
+            font-size: 2.5em;
+            color: #bf5f5f;
         }
-
-        /* Unique Bottom Navigation */
         nav {
-            position: sticky; /* Make navigation stick */
-            bottom: 0; /* Stick to the bottom */
-            left: 0;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
-            padding: 15px 0;
-            box-shadow: 0 -2px 10px rgba(0,0,0,0.05); /* Subtle shadow on top */
-            text-align: center;
-            z-index: 100;
+            margin-top: 10px;
         }
-
         nav a {
-            margin: 0 25px; /* More space between links */
-            color: #8c5e42;
+            margin: 0 15px;
+            color: #5d4037;
             text-decoration: none;
-            font-weight: 500;
-            font-size: 1.1em;
-            position: relative;
-            transition: color 0.3s ease;
+            font-weight: bold;
         }
-
-        nav a::after { /* Underline effect */
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background-color: #d18d7b; /* Accent color */
-            bottom: -5px;
-            left: 50%;
-            transform: translateX(-50%);
-            transition: width 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #d18d7b; /* Accent color on hover */
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        /* Hero Section - New addition for professional impact */
-        .hero {
-            position: relative;
-            width: 100%;
-            height: 500px; /* Adjust height as needed */
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 60px;
-        }
-
-        .hero img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Cover the entire area */
-            position: absolute;
-            top: 0;
-            left: 0;
-            filter: brightness(0.7); /* Slightly darken the image */
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 5;
-            text-align: center;
-            color: #fff;
-            padding: 20px;
-        }
-
-        .hero-content h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5em;
-            margin-bottom: 10px;
-            letter-spacing: 1.5px;
-        }
-
-        .hero-content p {
-            font-size: 1.3em;
-            max-width: 600px;
-            margin: 0 auto;
-            font-weight: 300;
-        }
-
         /* Main Content Sections */
-        .section {
-            margin-bottom: 80px; /* More space between sections */
-            text-align: center;
-        }
-
-        .section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8em; /* Larger section titles */
-            color: #8c5e42;
-            margin-bottom: 40px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section h2::after {
-            content: '';
-            position: absolute;
-            width: 60%;
-            height: 1.5px;
-            background-color: #d18d7b;
-            bottom: -10px;
-            left: 20%;
-        }
-
-        /* Product Gallery - Grid Layout for uniqueness */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid, bigger min size */
-            gap: 30px; /* More space between images */
+        .container {
             padding: 20px;
+            max-width: 900px;
+            margin: auto;
         }
-
-        .product {
-            position: relative;
-            overflow: hidden;
-            background-color: #fff;
-            aspect-ratio: 1 / 1; /* Force square shape */
-        }
-
-        .product img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures image covers the square without distortion */
-            display: block;
-            transition: transform 0.4s ease-in-out; /* Smooth zoom on hover */
-        }
-
-        .product:hover img {
-            transform: scale(1.05); /* Slight zoom effect */
-        }
-
-        .product-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(140, 94, 66, 0.8); /* Semi-transparent brown overlay */
-            color: #fff;
-            padding: 15px;
-            transform: translateY(100%); /* Start off-screen */
-            transition: transform 0.4s ease-in-out; /* Smooth slide-up on hover */
+        .section {
+            margin-bottom: 40px;
             text-align: center;
         }
-
-        .product:hover .product-overlay {
-            transform: translateY(0); /* Slide up on hover */
+        .section h2 {
+            font-size: 2em;
+            border-bottom: 2px solid #e6a49a;
+            display: inline-block;
+            padding-bottom: 5px;
         }
-
-        .product-overlay p {
-            margin: 0;
-            font-size: 1.2em;
-            font-weight: 700;
-            font-family: 'Playfair Display', serif;
+        /* Product Gallery */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px; /* Space between images */
         }
-
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .product img {
+            width: 250px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .product p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
         /* About Section */
         .about-us p {
-            text-align: center; /* Center align for minimal look */
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.1em;
-            color: #6a534b;
+            text-align: left;
+            line-height: 1.6;
         }
-
-        /* Footer */
-        footer {
-            background-color: #3b2b24; /* Darker brown for footer */
-            color: #e0d8d0; /* Light text */
-            text-align: center;
-            padding: 40px 0;
-        }
-
+        /* Social Media Icons */
         .social-links {
-            margin-bottom: 25px;
+            margin-bottom: 15px;
         }
-
         .social-links a {
             display: inline-block;
-            margin: 0 15px;
+            margin: 0 10px;
         }
-
         .social-links svg {
-            width: 30px; /* Larger icons */
-            height: 30px;
-            fill: #e0d8d0; /* Icon color */
-            transition: fill 0.3s ease;
+            width: 24px; /* Icon size */
+            height: 24px;
+            fill: #ffffff; /* Icon color (white) */
+            transition: opacity 0.3s ease; /* Smooth hover effect */
         }
-
         .social-links a:hover svg {
-            fill: #d18d7b; /* Accent color on hover */
+            opacity: 0.8; /* Makes the icon slightly transparent on hover */
         }
-
-        footer p {
-            margin: 0;
-            font-size: 0.9em;
-            color: #afa69e;
+        /* Footer */
+        footer {
+            background-color: #5d4037;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
-
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.8em;
-            }
-
-            .hero {
-                height: 350px;
-            }
-
-            .hero-content h2 {
-                font-size: 2.5em;
-            }
-
-            .hero-content p {
-                font-size: 1.1em;
-            }
-
-            .section h2 {
-                font-size: 2.2em;
-            }
-
-            .gallery {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            }
-
-            nav a {
-                margin: 0 10px;
-                font-size: 1em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 2em;
-            }
-            .hero {
-                height: 250px;
-            }
-            .hero-content h2 {
-                font-size: 1.8em;
-            }
-            .hero-content p {
-                font-size: 0.9em;
-            }
-            .section h2 {
-                font-size: 1.8em;
-            }
-            nav {
-                padding: 10px 0;
-            }
-            nav a {
-                margin: 0 8px;
-                font-size: 0.9em;
-            }
-        }
-
     </style>
 </head>
 <body>
 
     <header>
         <h1>Baked by Abby</h1>
+        <nav>
+
+        </nav>
     </header>
-
-    <div class="hero">
-        <img src="images/hero-image.jpg" alt="Delicious baked goods spread on a table">
-        <div class="hero-content">
-            <h2>Handcrafted with Love</h2>
-            <p>Experience the warmth and delight of homemade treats, baked fresh daily just for you.</p>
-        </div>
-    </div>
-
-    <nav>
-        <a href="#products">Our Goods</a>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact</a> </nav>
 
     <div class="container">
 
@@ -336,35 +124,17 @@
             <div class="gallery">
                 <div class="product">
                     <img src="images/bananabread.jpg" alt="Chocolate Chip Banana Bread">
-                    <div class="product-overlay">
-                        <p>Chocolate Chip Banana Bread</p>
-                    </div>
+                    <p>Chocolate Chip Banana Bread</p>
                 </div>
 
                 <div class="product">
                     <img src="images/bananabread1.jpg" alt="Moist Banana Bread">
-                    <div class="product-overlay">
-                        <p>Moist Banana Bread</p>
-                    </div>
+                    <p>Moist Banana Bread</p>
                 </div>
 
                 <div class="product">
-                    <img src="images/bananaicon.jpg" alt="Abby's Special">
-                    <div class="product-overlay">
-                        <p>Abby's Special</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="https://via.placeholder.com/600x600?text=Cookies" alt="Delicious Cookies">
-                    <div class="product-overlay">
-                        <p>Gourmet Cookies</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="https://via.placeholder.com/600x600?text=Muffins" alt="Freshly Baked Muffins">
-                    <div class="product-overlay">
-                        <p>Freshly Baked Muffins</p>
-                    </div>
+                    <img src="images/bananaicon.jpg" alt="Abby">
+                    <p>Abby</p>
                 </div>
             </div>
         </div>
@@ -372,15 +142,8 @@
         <div id="about" class="section about-us">
             <h2>About Us</h2>
             <p>
-                Welcome to Baked by Abby! We are a small business passionate about creating delicious, homemade baked goods with love and the finest ingredients. From classic cookies to delightful muffins, every treat is crafted to bring a smile to your face. We believe in the simple joy of a perfectly baked good, and we pour our hearts into every batch to ensure you get nothing but the best.
+                Welcome to Baked by Abby! We are a small business passionate about creating delicious, homemade baked goods with love and the finest ingredients. From classic cookies to delightful muffins, every treat is crafted to bring a smile to your face.
             </p>
-        </div>
-
-        <div id="contact" class="section">
-            <h2>Get in Touch</h2>
-            <p>Have questions, special requests, or just want to say hello? We'd love to hear from you!</p>
-            <p>Email: <a href="mailto:hello@bakedbyabby.com" style="color: #d18d7b; text-decoration: none; font-weight: bold;">hello@bakedbyabby.com</a></p>
-            <p>Follow us on social media for the latest updates and delicious new creations!</p>
         </div>
 
     </div>
@@ -390,7 +153,7 @@
             <a href="https://www.facebook.com/abbybakesxoxo/" target="_blank" rel="noopener noreferrer" aria-label="Baked by Abby Facebook Page">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6.6-.6-16.4-1.6-29.6-1.6c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256z"/></svg>
             </a>
-            </div>
+        </div>
         <p>&copy; 2025 Baked by Abby. All Rights Reserved.</p>
     </footer>
 
